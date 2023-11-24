@@ -3,7 +3,7 @@ package Level_1;
 import java.util.HashMap;
 import java.util.Map;
 
-public class 추억_점수 {
+public class 추억점수 {
     public int[] solution(String[] name, int[] yearning, String[][] photo) {
         int[] result = new int[photo.length];
 

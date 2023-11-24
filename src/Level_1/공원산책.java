@@ -1,6 +1,8 @@
 package Level_1;
 
-public class 공원_산책 {
+import java.util.Arrays;
+
+public class 공원산책 {
     public static char[][] board;
 
     public int[] solution(String[] park, String[] routes) {
@@ -81,5 +83,61 @@ public class 공원_산책 {
         return new int[]{x, y};
     }
 
+    public static void main(String[] args) {
+        int[] arr = new int[5];
+        Arrays.setAll(arr, i -> i * 2);
+        System.out.println(Arrays.toString(arr));
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        // Comparable 인터페이스를 구현한 클래스를 사용한 예시
+        Person[] people = new Person[3];
+        people[0] = new Person("Bob", 20);
+        people[1] = new Person("Alice", 30);
+        people[2] = new Person("Charlie", 25);
+        Arrays.sort(people);
+        System.out.println(Arrays.toString(people));
+    }
+}
+
+class Person implements Comparable<Person> {
+    private String name;
+    private int age;
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    @Override
+    public int compareTo(Person other) {
+        return Integer.compare(this.age, other.age);
+    }
+
+    @Override
+    public String toString() {
+        return "Person2{" +
+            "name='" + name + '\'' +
+            ", age=" + age +
+            '}';
+    }
 }
 
