@@ -21,6 +21,7 @@ public class 대충만든자판 {
         for (String target : targets) {
             int cnt = 0;
             boolean flag = true;
+
             for (int i = 0; i < target.length(); i++) {
                 char c = target.charAt(i);
                 if (!map.containsKey(c)) {
